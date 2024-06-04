@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Recommendation</title>
+</head>
+<body>
+
+<h1>Welcome to Book Recommendation!</h1>
+
+<!-- Form to select genre and submit -->
+<form action="/recommendations" method="post">
+    <label for="genre">Select your genre:</label>
+    <select id="genre" name="genre">
+        <option value="fiction">Fiction</option>
+        <option value="mystery">Mystery</option>
+        <!-- Add more options as needed -->
+    </select>
+    <button type="submit">Get Book Recommendations</button>
+</form>
+
+<!-- Placeholder for book recommendations -->
+<div id="bookRecommendations">
+    {% if recommendations %}
+    <h2>Books in {{ genre }}:</h2>
+    <ul>
+    {% for book in recommendations %}
+        <li>{{ book }}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No recommendations available for this genre.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
+

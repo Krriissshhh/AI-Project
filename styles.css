@@ -1,0 +1,239 @@
+body {
+    background-image: url(/images/read.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff; 
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 900px ;
+}
+  
+  .container {
+    width: 80%;
+    max-width:800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+   
+  }
+  .submit{
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+  .sf{
+    font-size: 24px;
+  }
+  .si{
+    height: 24px;
+    vertical-align:top ;
+    border-width:1px ;
+    border-color: rgb(245, 245, 245);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+    border-style: solid;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 15px;
+  }
+  .but{
+    background-color: white;
+    border-color: rgb(235, 156, 10);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(235, 156, 10);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 10px;
+    transition:background-color 0.2s,
+    color 0.2s ;
+    vertical-align: top;
+    font-size: 10PX;
+  }
+  .but:hover{
+    background-color: rgb(235, 156, 10) ;
+    color: white;
+  }
+  .but:active{
+    opacity: 0.7;
+  }
+  .si:active{
+    border-color: rgb(245, 245, 245);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+    border-style: solid;
+  }
+    
+.recommendationid{
+  display: flex;
+  background-size: cover;
+  text-align: center;
+  margin-top: 30px;
+  background-image: url(/images/recom2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex: 1;
+}
+.containrecomdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+.result{
+  display: flex;
+  opacity: 1;
+  color: black;
+  background-color: rgba(255,255,255,0.5);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-direction: column;
+  margin-right: 8px;
+}
+.recommessage{
+  display: block;
+  flex-direction: column;
+  min-width: 170px;
+  text-align: left;
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+@media(max-width:750px ) {
+.result{
+  height: 430px;
+  min-width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 8px;
+  font-size: 18px;
+}
+.recommessage{
+  
+  min-width: 170px;
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: 700;
+ 
+}
+.recommendationid{ 
+  height: 480px;
+  width: 820px;
+  margin-top: 30px;
+  flex: 1;
+}
+}
+@media(min-width: 999px){
+  
+  .result{
+    
+    height: 470px;
+    min-width: 400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 8px;
+    font-size: 22px;
+  }
+  .recommessage{
+    min-width: 170px;
+    margin-right: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    
+  }
+
+  .recommendationid{
+    height: 600px;
+    width: 960px;
+    margin-top: 30px;
+    flex: 1;
+  }
+}
+  @media(min-width:751px) and (max-width: 999px){
+
+    .result{
+      height: 430px;
+      min-width: 300px; 
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-right: 8px;
+      font-size: 18px;
+    }
+    .recommessage{
+      min-width: 170px;
+      margin-right: 30px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .recommendationid{
+      height: 480px;
+      width: 820px;
+      margin-top: 30px;
+      flex: 1;
+      padding-top: 10px;
+    }
+
+  }
+
+
+.tooltip {
+  display: inline-block;
+  border-color:black;
+  position: relative;
+  padding-left:100px;
+}
+.tooltip .tooltiptext {
+  top: 100%;
+  left: 50%;
+  margin-left: -64px;
+  width : 220px;
+  visibility: hidden;
+  background-color: black;
+  border-radius:4px;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  padding: 5px;
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: white;
+}
+
+.tooltip .tooltiptext::before {
+content: " ";
+position: absolute;
+bottom: 100%;  /* At the top of the tooltip */
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

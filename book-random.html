@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pickypics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Pickypics</h1>
+    <p>Enjoy reading your favourite books</p>
+  </div>
+  <div class="submit">
+    <label class="sf"   for="genre"> Genre : </label>
+    <input class="si" placeholder="Search" type="text" id="genre" name="genre">
+    <button onclick="const value =getValue()"   class="but">
+      ENTER
+    </button>
+    
+  </div>
+  <script>
+        function getValue() {
+        const genreSearch = document.getElementById('genre');
+        const value = String(genreSearch.value);
+        //console.log(typeof(value))
+        //if (search === 'mystery')
+        return value
+        
+        }
+        console.log(value)
+        const recommendation = pick10books();
+        alert(recommendation);
+        const mystery = ["\"To Kill a Mockingbird\" by Harper Lee",
+        "\"1984\" by George Orwell",
+        "\"The Great Gatsby\" by F. Scott Fitzgerald",
+        "\"Pride and Prejudice\" by Jane Austen",
+        "\"The Catcher in the Rye\" by J.D. Salinger",
+        "\"The Lord of the Rings\" by J.R.R. Tolkien",
+        "\"Harry Potter and the Sorcerer's Stone\" by J.K. Rowling",
+        "\"The Hobbit\" by J.R.R. Tolkien",
+        "\"The Grapes of Wrath\" by John Steinbeck",
+        "\"Brave New World\" by Aldous Huxley",];
+        //console.log(typeof(mystery))
+
+        const fiction = [
+        "\"To Kill a Mockingbird\" by Harper Lee",
+        "\"1984\" by George Orwell",
+        "\"The Great Gatsby\" by F. Scott Fitzgerald",
+        "\"Pride and Prejudice\" by Jane Austen",
+        "\"The Catcher in the Rye\" by J.D. Salinger",
+        "\"The Lord of the Rings\" by J.R.R. Tolkien",
+        "\"Harry Potter and the Sorcerer's Stone\" by J.K. Rowling",
+        "\"The Hobbit\" by J.R.R. Tolkien",
+        "\"The Grapes of Wrath\" by John Steinbeck",
+        "\"Brave New World\" by Aldous Huxley"];
+
+
+      function pick10books(){
+           
+           const randomNumber = Math.random();
+
+           let books = '';
+           
+           if(randomNumber >= 0 && randomNumber < 0.1){
+               books= value [0];
+           }
+           else if (randomNumber >= 0.1 && randomNumber< 0.2){
+               books = value [1];
+           }
+           else if (randomNumber >= 0.2 && randomNumber< 0.3) {
+               books = value [2];
+           }
+           else if (randomNumber >= 0.3 && randomNumber< 0.4){
+               books = value [3];
+           }
+           else if (randomNumber >= 0.4 && randomNumber< 0.5) {
+               books = value [4];
+           }
+           else if (randomNumber >= 0.5 && randomNumber< 0.6){
+               books = value [5];
+           }
+           else if (randomNumber >= 0.6 && randomNumber< 0.7) {
+               books = value[6];
+           }
+           else if (randomNumber >= 0.7 && randomNumber< 0.8){
+               books = value[7];
+           }
+           else if (randomNumber >= 0.8 && randomNumber< 0.9) {
+               books = value[8];
+           }
+           else if (randomNumber >= 0.9 && randomNumber< 1) {
+               books = value[9];
+           }
+
+           return books; 
+
+       }
+  </script>
+</body>
+</html>

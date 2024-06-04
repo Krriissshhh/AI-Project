@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pickypics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Pickypics</h1>
+    <p>Enjoy reading your favourite books</p>
+  </div>
+  <div class="submit">
+    <label class="sf"   for="genre"> Genre : </label>
+    <input class="si" placeholder="Search" type="text" id="genre" name="genre">
+    <button onclick="getValue()"   class="but">
+      ENTER
+    </button>
+    
+  </div>
+  <script>
+    function getValue() {
+      let genreSearch = document.getElementById('genre');
+      let value = genreSearch.value;
+    
+      if (value==='mystery'|| genreSearch==='thriller'){
+          console.log('Dracula, by Bram Stoker','\n','My Annihilation, by Fuminori Nakamura','\n','The Silent Patient, by Alex Michaelides','\n','The Little Death, by Michael Nava');
+      }
+      else if (value==='romance'){
+        console.log('Twilight series by Stephenie Meyer','\n','The Hating Game by Sally Throne');
+      }}
+  </script>
+</body>
+</html>
